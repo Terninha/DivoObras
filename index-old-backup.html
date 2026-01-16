@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divo Obras - Construção e Reformas Residenciais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .btn-primary {
+            @apply px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 inline-flex items-center gap-2;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:active {
+            @apply transform translate-y-0;
+        }
+
+        .btn-secondary {
+            @apply px-8 py-4 bg-white border-2 border-slate-300 text-slate-700 font-bold rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-600 hover:text-blue-600;
+        }
+
+        .icon-box {
+            @apply transition-all duration-300 transform hover:scale-105;
+        }
+
+        .service-card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+
+        .nav-link {
+            @apply relative;
+        }
+
+        .nav-link::after {
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300;
+            content: '';
+        }
+
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+
+        @media (max-width: 768px) {
+            .btn-primary, .btn-secondary {
+                @apply px-6 py-3 text-base;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white shadow-sm py-4 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold hover:opacity-80 transition">
+                <span class="text-slate-900">Divo</span><span class="text-blue-600"> Obras</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#hero" class="nav-link text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Início</a>
+                <a href="#about" class="nav-link text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Sobre</a>
+                <a href="#services" class="nav-link text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Serviços</a>
+                <a href="#portfolio" class="nav-link text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Portfólio</a>
+                <a href="#contact" class="nav-link text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Contato</a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="btn-primary text-sm">
+                    <i class="fab fa-whatsapp"></i> Fale Comigo
+                </a>
+            </div>
+
+            <button class="md:hidden text-slate-700 hover:text-blue-600 transition" id="menuBtn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-blue-50 text-blue-700 text-sm font-semibold mb-6 border border-blue-200">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        Mais de 30 anos de experiência
+                    </div>
+                    
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                        Construção e Reformas Residenciais com mais de <span class="text-blue-600">30 anos de experiência</span>
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl">
+                        Empreiteiro autônomo com acompanhamento direto, organização na obra e compromisso total com prazos e qualidade.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-primary w-full sm:w-auto justify-center">
+                            <i class="fab fa-whatsapp"></i>
+                            Solicitar Orçamento
+                        </a>
+                        <a href="#portfolio" class="btn-secondary w-full sm:w-auto text-center">
+                            <i class="fas fa-images mr-2"></i> Ver Projetos
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm text-slate-600 font-medium">
+                        <span class="flex items-center gap-2 hover:text-blue-600 transition">
+                            <i class="fas fa-check-circle text-green-600"></i> Orçamento Gratuito
+                        </span>
+                        <span class="flex items-center gap-2 hover:text-blue-600 transition">
+                            <i class="fas fa-check-circle text-green-600"></i> Prazos Cumpridos
+                        </span>
+                        <span class="flex items-center gap-2 hover:text-blue-600 transition">
+                            <i class="fas fa-check-circle text-green-600"></i> Referências
+                        </span>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full">
+                    <div class="bg-slate-100 rounded-2xl p-8 text-center h-72 flex flex-col items-center justify-center shadow-sm border border-slate-200">
+                        <i class="fas fa-hard-hat text-slate-400 text-6xl mb-4"></i>
+                        <p class="text-slate-600 font-semibold text-lg">Empreiteiro experiente analisando obra residencial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Sobre Mim</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Mais do que construir, meu trabalho é realizar o seu projeto de vida com segurança e tranquilidade. Com mais de 30 anos de experiência na construção civil, decidi atuar como empreiteiro autônomo para oferecer algo que falta no mercado: atendimento personalizado e presença real na obra.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Diferente de grandes empresas onde você é apenas mais um número, comigo você tem linha direta. Eu coordeno pessoalmente cada etapa, desde a compra dos materiais até o último retoque da pintura.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                            <i class="fas fa-briefcase text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-bold text-blue-600 mb-1">30+</p>
+                        <h3 class="font-bold text-slate-900 text-sm">Anos de Experiência</h3>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                            <i class="fas fa-home text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-bold text-blue-600 mb-1">100+</p>
+                        <h3 class="font-bold text-slate-900 text-sm">Projetos Concluídos</h3>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                            <i class="fas fa-star text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-bold text-blue-600 mb-1">5/5</p>
+                        <h3 class="font-bold text-slate-900 text-sm">Satisfação Garantida</h3>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                            <i class="fas fa-clock text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-bold text-blue-600 mb-1">100%</p>
+                        <h3 class="font-bold text-slate-900 text-sm">Pontualidade</h3>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                            <i class="fas fa-handshake text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-bold text-blue-600 mb-1">Sim</p>
+                        <h3 class="font-bold text-slate-900 text-sm">Transparência Total</h3>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-center hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                            <i class="fas fa-phone text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-bold text-blue-600 mb-1">Direto</p>
+                        <h3 class="font-bold text-slate-900 text-sm">Acompanhamento</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossos Serviços</h2>
+                <p class="text-slate-600 text-lg">Soluções completas para transformar seu imóvel</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center mb-6 icon-box">
+                        <i class="fas fa-building text-slate-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Construção Residencial</h3>
+                    <p class="text-slate-600 leading-relaxed">Execução completa da sua obra, da fundação ao telhado com qualidade garantida.</p>
+                </div>
+
+                <div class="service-card bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center mb-6 icon-box">
+                        <i class="fas fa-hammer text-slate-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Reformas em Geral</h3>
+                    <p class="text-slate-600 leading-relaxed">Transformação de ambientes com técnica apurada e organização impecável.</p>
+                </div>
+
+                <div class="service-card bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center mb-6 icon-box">
+                        <i class="fas fa-ruler text-slate-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Alvenaria e Estrutura</h3>
+                    <p class="text-slate-600 leading-relaxed">Levantamento de paredes e estruturas com precisão e segurança.</p>
+                </div>
+
+                <div class="service-card bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center mb-6 icon-box">
+                        <i class="fas fa-paint-roller text-slate-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Acabamentos Finos</h3>
+                    <p class="text-slate-600 leading-relaxed">Detalhes que fazem a diferença, pintura e acabamentos de qualidade.</p>
+                </div>
+
+                <div class="service-card bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center mb-6 icon-box">
+                        <i class="fas fa-bolt text-slate-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Elétrica e Hidráulica</h3>
+                    <p class="text-slate-600 leading-relaxed">Instalações profissionais, seguras e em conformidade com normas.</p>
+                </div>
+
+                <div class="service-card bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center mb-6 icon-box">
+                        <i class="fas fa-users text-slate-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Gestão de Obra</h3>
+                    <p class="text-slate-600 leading-relaxed">Coordenação profissional garantindo cronograma e qualidade total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section id="differentials" class="py-20 bg-blue-50 text-slate-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Por que escolher meus serviços?</h2>
+                <p class="text-slate-600 text-lg">A tranquilidade de saber que sua obra está em mãos responsáveis e organizadas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex items-start gap-4 bg-white p-6 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white">
+                        <i class="fas fa-check text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Atendimento Direto</h3>
+                        <p class="text-slate-600">Você fala comigo, responsável pela obra. Sem intermediários.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 bg-white p-6 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white">
+                        <i class="fas fa-check text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Orçamento Transparente</h3>
+                        <p class="text-slate-600">Planilha detalhada. Você sabe exatamente onde investe.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 bg-white p-6 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white">
+                        <i class="fas fa-check text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Obra Limpa</h3>
+                        <p class="text-slate-600">Organização diária e respeito pelo seu patrimônio.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 bg-white p-6 rounded-lg border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white">
+                        <i class="fas fa-check text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Prazo Garantido</h3>
+                        <p class="text-slate-600">Cronograma realista com comprometimento total.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Portfólio de Obras</h2>
+                <p class="text-slate-600">Confira alguns dos projetos entregues recentemente</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fas fa-image text-slate-400 text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-lg">Casa em Condomínio</h3>
+                        <p class="text-sm text-slate-600 mt-2">Reforma completa</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fas fa-image text-slate-400 text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-lg">Sobrado Moderno</h3>
+                        <p class="text-sm text-slate-600 mt-2">Construção nova</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fas fa-image text-slate-400 text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-lg">Residência Minimalista</h3>
+                        <p class="text-sm text-slate-600 mt-2">Design moderno</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fas fa-image text-slate-400 text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-lg">Fachada e Acabamentos</h3>
+                        <p class="text-sm text-slate-600 mt-2">Reforma externa</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fas fa-image text-slate-400 text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-lg">Reforma e Ampliação</h3>
+                        <p class="text-sm text-slate-600 mt-2">Expansão da casa</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fas fa-image text-slate-400 text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-lg">Estrutura e Fundação</h3>
+                        <p class="text-sm text-slate-600 mt-2">Obra estrutural</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">O que dizem meus clientes</h2>
+                <p class="text-slate-600">A satisfação de quem já construiu comigo é a minha maior garantia</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-lg border border-slate-200">
+                    <p class="text-slate-400 text-2xl mb-4">"</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">O Divonsir foi extremamente profissional. A reforma do meu apartamento ficou perfeito e ele entregou antes do prazo. Recomendo muito!</p>
+                    <p class="font-bold text-slate-900">Mariana Souza</p>
+                    <p class="text-sm text-slate-600">Proprietária Residencial</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg border border-slate-200">
+                    <p class="text-slate-400 text-2xl mb-4">"</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">Confiança é tudo em obra. Deixei a chave do meu escritório com ele e fiquei tranquilo. O acabamento ficou perfeito.</p>
+                    <p class="font-bold text-slate-900">Roberto Almeida</p>
+                    <p class="text-sm text-slate-600">Empresário</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg border border-slate-200">
+                    <p class="text-slate-400 text-2xl mb-4">"</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">Gostei muito da transparência no orçamento. Não teve custos extras surpresa e a equipe foi muito educada.</p>
+                    <p class="font-bold text-slate-900">Ana Clara</p>
+                    <p class="text-sm text-slate-600">Reforma de Casa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Solicite seu Orçamento</h2>
+                <p class="text-slate-600 text-lg">Entre em contato conosco. Responderemos o mais breve possível</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Contact Info -->
+                <div class="bg-slate-50 p-10 rounded-2xl border border-slate-200">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-8">Informações de Contato</h3>
+                    
+                    <div class="mb-8 pb-8 border-b border-slate-200">
+                        <div class="flex items-start gap-4">
+                            <i class="fab fa-whatsapp text-slate-400 text-2xl mt-1"></i>
+                            <div>
+                                <p class="text-slate-600 font-semibold text-sm mb-1">WhatsApp / Telefone</p>
+                                <a href="https://wa.me/5511999999999" class="text-slate-900 font-bold text-lg hover:text-blue-600 transition">(11) 99999-9999</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 pb-8 border-b border-slate-200">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope text-slate-400 text-2xl mt-1"></i>
+                            <div>
+                                <p class="text-slate-600 font-semibold text-sm mb-1">Email</p>
+                                <a href="mailto:contato@divoobras.com.br" class="text-slate-900 font-bold text-lg hover:text-blue-600 transition break-all">contato@divoobras.com.br</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 pb-8 border-b border-slate-200">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-slate-400 text-2xl mt-1"></i>
+                            <div>
+                                <p class="text-slate-600 font-semibold text-sm mb-1">Região de Atendimento</p>
+                                <p class="text-slate-900 font-semibold">São Paulo e Grande ABC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-clock text-slate-400 text-2xl mt-1"></i>
+                            <div>
+                                <p class="text-slate-600 font-semibold text-sm mb-1">Horário de Atendimento</p>
+                                <p class="text-slate-900 font-semibold">Segunda a sábado</p>
+                                <p class="text-slate-600">07:00 às 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-50 p-10 rounded-2xl border border-slate-200">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-8">Envie uma Mensagem</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Seu nome completo" class="w-full px-6 py-4 bg-white border border-slate-300 rounded-xl focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition font-medium text-slate-900" required>
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="(00) 00000-0000" class="w-full px-6 py-4 bg-white border border-slate-300 rounded-xl focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition font-medium text-slate-900" required>
+                        </div>
+                        <div>
+                            <textarea placeholder="Descreva brevemente o que você precisa" class="w-full px-6 py-4 bg-white border border-slate-300 rounded-xl focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition h-32 font-medium text-slate-900 resize-none" required></textarea>
+                        </div>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-base">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Enviar via WhatsApp</span>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-blue-200 py-12 border-t border-blue-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                <div class="text-center md:text-left">
+                    <h2 class="text-2xl font-bold text-white mb-2">Divo Obras</h2>
+                    <p class="text-sm text-blue-300">Construindo sonhos com qualidade e confiança.</p>
+                </div>
+
+                <div class="flex gap-8 text-sm font-medium">
+                    <a href="#hero" class="text-blue-300 hover:text-white transition">Início</a>
+                    <a href="#services" class="text-blue-300 hover:text-white transition">Serviços</a>
+                    <a href="#portfolio" class="text-blue-300 hover:text-white transition">Portfólio</a>
+                    <a href="#contact" class="text-blue-300 hover:text-white transition">Contato</a>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs gap-4 text-blue-300">
+                <p>&copy; <span id="year"></span> Divo Obras. Todos os direitos reservados.</p>
+                <p>Atendendo em São Paulo e Grande ABC</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-8 right-8 w-16 h-16 bg-green-600 text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 z-40 flex items-center justify-center">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            alert('Menu mobile será implementado em breve');
+        });
+    </script>
+</body>
+</html>
