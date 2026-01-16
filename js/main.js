@@ -1,7 +1,7 @@
 // WhatsApp handler function
 function openWhatsApp(message = '') {
     const phoneNumber = '5542988153287';
-    const url = `https://web.whatsapp.com/send/?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
 
